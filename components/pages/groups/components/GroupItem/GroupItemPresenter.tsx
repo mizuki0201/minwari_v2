@@ -9,7 +9,7 @@ type Props = {
   }>;
 };
 
-export const GroupCardPresenter: FC<Props> = ({ name, users }) => (
+export const GroupItemPresenter: FC<Props> = ({ name, users }) => (
   <chakra.li width="100%" p="20px 15px" borderBottom="1px solid #DEDDDD">
     <chakra.p
       width="100%"
