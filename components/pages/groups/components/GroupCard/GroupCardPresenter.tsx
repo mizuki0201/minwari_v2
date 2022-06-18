@@ -4,6 +4,7 @@ import { chakra } from "@chakra-ui/react";
 type Props = {
   name: string;
   users: Array<{
+    id: number;
     name: string;
   }>;
 };
@@ -27,13 +28,8 @@ export const GroupCardPresenter: FC<Props> = ({ name, users }) => (
       whiteSpace="nowrap"
       overflow="hidden"
     >
-      {users.map(({ name }) => (
-        <chakra.li
-          key={name}
-          width="100%"
-          listStyleType="none"
-          display="inline"
-        >
+      {users.map(({ id, name }) => (
+        <chakra.li key={id} width="100%" listStyleType="none" display="inline">
           {`${name}, `}
         </chakra.li>
       ))}

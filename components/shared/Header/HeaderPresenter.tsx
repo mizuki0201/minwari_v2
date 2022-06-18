@@ -8,11 +8,11 @@ export const HeaderPresenter: FC<{
   <>
     <chakra.div
       display="flex"
-      alignItems="flex-end"
+      alignItems="center"
       justifyContent="space-between"
       backgroundColor="#489FF0"
       color="#ffffff"
-      height="90px"
+      height="60px"
       width="100%"
       padding="11px 15px"
       position="fixed"
@@ -33,6 +33,6 @@ export const HeaderPresenter: FC<{
         ＋
       </chakra.button>
     </chakra.div>
-    <chakra.div height="90px"></chakra.div>
+    <chakra.div height="60px"></chakra.div>
   </>
 );
