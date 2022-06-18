@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import { Group } from "../components/pages/groups";
+import { GroupPage } from "../components/pages/groups";
 
 const Home: NextPage = () => {
-  return <Group />;
+  return <GroupPage />;
 };
 
 export default Home;
