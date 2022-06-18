@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { chakra, useDisclosure } from "@chakra-ui/react";
 import { Header } from "../../shared/Header";
 import { FooterNavBar } from "../../shared/FooterNavBar";
-import { GroupCard } from "./components/GroupCard";
+import { GroupItem } from "./components/GroupItem";
 import { GroupCreateModal } from "./components/GroupCreateModal";
 
 type GroupsProps = Array<{
@@ -34,7 +34,7 @@ export const GroupPresenter: FC<{
         whiteSpace="nowrap"
       >
         {groups.map((group) => (
-          <GroupCard key={group.id} {...group} />
+          <GroupItem key={group.id} {...group} />
         ))}
       </chakra.ul>
       <GroupCreateModal isOpen={isOpen} onClose={onClose} friends={friends} />
