@@ -4,6 +4,7 @@ import { Header } from "../../shared/Header";
 import { FooterNavBar } from "../../shared/FooterNavBar";
 import { EventLists } from "./components/EventLists";
 import { UserLists } from "./components/UserLists";
+import { EventCreateModal } from "./components/EventCreateModal";
 
 type Props = {
   group: {
@@ -58,6 +59,7 @@ export const EventPagePresenter: FC<Props> = ({ group, events, users }) => {
       ) : (
         <UserLists users={users} />
       )}
+      <EventCreateModal isOpen={isOpen} onClose={onClose} />
       <FooterNavBar />
     </>
   );

@@ -20,7 +20,7 @@ type FriendsProps = Array<{
   name: string;
 }>;
 
-export const GroupCreateModal: FC<{
+export const GroupCreateModalPresenter: FC<{
   isOpen: boolean;
   onClose: () => void;
   friends: FriendsProps;
@@ -38,7 +38,6 @@ export const GroupCreateModal: FC<{
             </FormLabel>
             <Input
               id="group-name"
-              width="300px"
               p="10px"
               border="1px solid #ABABAB"
               borderRadius="5px"
