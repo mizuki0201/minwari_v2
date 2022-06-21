@@ -1,1 +1,1 @@
-export { GroupCreateModal } from "./GroupCreateModal";
+export { GroupCreateModalPresenter as GroupCreateModal } from "./GroupCreateModalPresenter";
