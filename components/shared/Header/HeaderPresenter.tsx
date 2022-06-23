@@ -3,7 +3,7 @@ import { chakra } from "@chakra-ui/react";
 
 export const HeaderPresenter: FC<{
   title: string;
-  onClickPlusButton: () => void;
+  onClickPlusButton?: () => void;
 }> = ({ title, onClickPlusButton }) => (
   <>
     <chakra.div
@@ -22,16 +22,20 @@ export const HeaderPresenter: FC<{
       <chakra.h1 fontSize="20px" fontWeight="bold">
         {title}
       </chakra.h1>
-      <chakra.button
-        display="block"
-        height="30px"
-        width="30px"
-        fontSize="20px"
-        fontWeight="bold"
-        onClick={onClickPlusButton}
-      >
-        ＋
-      </chakra.button>
+      {onClickPlusButton ? (
+        <chakra.button
+          display="block"
+          height="30px"
+          width="30px"
+          fontSize="20px"
+          fontWeight="bold"
+          onClick={onClickPlusButton}
+        >
+          ＋
+        </chakra.button>
+      ) : (
+        <></>
+      )}
     </chakra.div>
     <chakra.div height="60px"></chakra.div>
   </>
