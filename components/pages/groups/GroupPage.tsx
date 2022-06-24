@@ -1,7 +1,9 @@
 import React, { FC } from "react";
-import { GroupPresenter } from "./GroupPagePresenter";
+import { GroupPagePresenter } from "./GroupPagePresenter";
 import { groupsMockData, friendsMockData } from "./__dev__/mockData";
 
 export const GroupPage: FC = () => {
-  return <GroupPresenter groups={groupsMockData} friends={friendsMockData} />;
+  return (
+    <GroupPagePresenter groups={groupsMockData} friends={friendsMockData} />
+  );
 };

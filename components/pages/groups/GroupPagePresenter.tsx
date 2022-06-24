@@ -19,7 +19,7 @@ type FriendsProps = Array<{
   name: string;
 }>;
 
-export const GroupPresenter: FC<{
+export const GroupPagePresenter: FC<{
   groups: GroupsProps;
   friends: FriendsProps;
 }> = ({ groups, friends }) => {
