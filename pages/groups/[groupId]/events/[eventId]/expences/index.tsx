@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import { ExpencePage } from "../../../../../../components/pages/expences/";
-import { Head } from "../../../../../../components/shared/Head";
+import { ExpencePage } from "components/pages/expences/";
+import { Head } from "components/shared/Head";
 
 const Event: NextPage = () => {
   return (

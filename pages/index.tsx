@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import { GroupPage } from "../components/pages/groups";
-import { Head } from "../components/shared/Head";
+import { GroupPage } from "components/pages/groups";
+import { Head } from "components/shared/Head";
 
 const Home: NextPage = () => {
   return (

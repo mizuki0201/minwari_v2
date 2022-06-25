@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import { EventPage } from "../../../../components/pages/events/";
-import { Head } from "../../../../components/shared/Head";
+import { EventPage } from "components/pages/events/";
+import { Head } from "components/shared/Head";
 
 const Event: NextPage = () => {
   return (

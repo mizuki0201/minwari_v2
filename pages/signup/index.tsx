@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import { SignupPage } from "../../components/pages/signup";
-import { Head } from "../../components/shared/Head";
+import { SignupPage } from "components/pages/signup";
+import { Head } from "components/shared/Head";
 
 const Signup: NextPage = () => {
   return (
