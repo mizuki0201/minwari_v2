@@ -1,4 +1,7 @@
 export const expencesMockData = {
+  group: {
+    id: 1,
+  },
   event: {
     name: "イベント名",
   },

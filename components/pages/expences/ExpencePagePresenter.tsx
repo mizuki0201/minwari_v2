@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { chakra, useDisclosure } from "@chakra-ui/react";
+import { path } from "routes/path";
 import { Header } from "../../shared/Header";
 import { FooterNavBar } from "../../shared/FooterNavBar";
 import { ExpenceLists } from "./components/ExpenceLists";
@@ -7,6 +8,9 @@ import { UserLists } from "./components/UserLists";
 import { ExpenceCreateModal } from "./components/ExpenceCreateModal";
 
 type Props = {
+  group: {
+    id: number;
+  };
   event: {
     name: string;
   };
@@ -24,12 +28,23 @@ type Props = {
   }>;
 };
 
-export const ExpencePagePresenter: FC<Props> = ({ event, expences, users }) => {
+export const ExpencePagePresenter: FC<Props> = ({
+  group,
+  event,
+  expences,
+  users,
+}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selected, setSelected] = React.useState<"expence" | "user">("expence");
   return (
     <>
       <Header title={event.name} onClickPlusButton={onOpen} />
+      <chakra.div padding="5px" backgroundColor="#EFEFEF">
+        <chakra.a
+          href={path.events(String(group.id))}
+          fontSize="14px"
+        >{`< イベント一覧に戻る`}</chakra.a>
+      </chakra.div>
       <chakra.div width="100%" display="flex">
         <chakra.div
           width="50%"
