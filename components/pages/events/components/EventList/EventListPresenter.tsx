@@ -12,7 +12,7 @@ type Props = Array<{
 export const EventListPresenter: FC<{ events: Props }> = ({ events }) => (
   <chakra.ul
     width="100%"
-    height="calc(100vh - 200px)"
+    height="calc(100vh - 234px)"
     overflow="scroll"
     whiteSpace="nowrap"
     cursor="pointer"

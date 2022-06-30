@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { chakra, useDisclosure } from "@chakra-ui/react";
+import { path } from "routes/path";
 import { Header } from "../../shared/Header";
 import { FooterNavBar } from "../../shared/FooterNavBar";
 import { EventList } from "./components/EventList";
@@ -28,6 +29,12 @@ export const EventPagePresenter: FC<Props> = ({ group, events, users }) => {
   return (
     <>
       <Header title={group.name} onClickPlusButton={onOpen} />
+      <chakra.div padding="5px" backgroundColor="#EFEFEF">
+        <chakra.a
+          href={path.top()}
+          fontSize="14px"
+        >{`< グループ一覧に戻る`}</chakra.a>
+      </chakra.div>
       <chakra.div width="100%" display="flex">
         <chakra.div
           width="50%"
