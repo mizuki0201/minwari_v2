@@ -2,8 +2,8 @@ import React, { FC } from "react";
 import { chakra, useDisclosure } from "@chakra-ui/react";
 import { Header } from "../../shared/Header";
 import { FooterNavBar } from "../../shared/FooterNavBar";
-import { EventLists } from "./components/EventLists";
-import { UserLists } from "./components/UserLists";
+import { EventList } from "./components/EventList";
+import { UserList } from "./components/UserList";
 import { EventCreateModal } from "./components/EventCreateModal";
 
 type Props = {
@@ -55,9 +55,9 @@ export const EventPagePresenter: FC<Props> = ({ group, events, users }) => {
         </chakra.div>
       </chakra.div>
       {selected === "event" ? (
-        <EventLists events={events} />
+        <EventList events={events} />
       ) : (
-        <UserLists users={users} />
+        <UserList users={users} />
       )}
       <EventCreateModal isOpen={isOpen} onClose={onClose} />
       <FooterNavBar />

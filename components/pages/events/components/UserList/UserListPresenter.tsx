@@ -7,7 +7,7 @@ type Props = Array<{
   amount: number;
 }>;
 
-export const UserListsPresenter: FC<{ users: Props }> = ({ users }) => (
+export const UserListPresenter: FC<{ users: Props }> = ({ users }) => (
   <chakra.ul
     width="100%"
     height="calc(100vh - 200px)"
